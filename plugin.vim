@@ -7,7 +7,7 @@ call plug#begin(g:PLUGIN_HOME)
 " bclose is required by ranger.vim
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeCWD'] }
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " Git
@@ -21,7 +21,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug '907th/vim-auto-save'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Yggdroot/indentLine'
 Plug 'easymotion/vim-easymotion'
 
@@ -100,3 +100,6 @@ let g:markdown_syntax_conceal = 0
 "" comfortable-motion
 let g:comfortable_motion_no_default_key_mappings = 1
 let g:comfortable_motion_impulse_multiplier = 1
+
+
+" vim: ts=2 sw=2 et

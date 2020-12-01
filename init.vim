@@ -63,3 +63,6 @@ let s:local_config = s:nvim_config_root . '/local.vim'
 if filereadable(s:local_config)
   execute 'source ' . s:local_config
 endif
+
+
+" vim: ts=2 sw=2 et
