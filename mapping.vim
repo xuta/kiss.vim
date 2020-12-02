@@ -15,6 +15,7 @@ nnoremap wl <C-w>l
 " move on buffer
 nnoremap bn :bnext<CR>
 nnoremap bp :bprev<CR>
+nnoremap bd :bdelete<CR>
 
 
 " tab

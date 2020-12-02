@@ -46,15 +46,20 @@ call plug#end()
 """ setting
 
 
-"" ranger
+" ranger
 let g:bclose_no_plugin_maps = 1
 let g:ranger_map_keys = 0
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
 
 
-"" LeaderF
+" LeaderF
 let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_PreviewResult = {
+    \ 'File': 1,
+    \ 'Rg': 1,
+    \}
 let g:Lf_UseCache = 0
 let g:Lf_WildIgnore = {
     \ 'dir': ['.git', '__pycache__', '.DS_Store'],
@@ -65,39 +70,39 @@ let g:Lf_WildIgnore = {
     \}
 
 
-"" vim-auto-save
+" vim-auto-save
 let g:auto_save = 1
 let g:auto_save_events = ['InsertLeave', 'TextChanged']
 let g:auto_save_silent = 0
 
 
-"" vim-signify
+" vim-signify
 let g:signify_vcs_list = [ 'git' ]
 
 
-"" vim-airline
+" vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline_highlighting_cache = 1
 
 
-"" ayu
+" ayu
 let g:airline_theme='ayu_mirage'
 let ayucolor="mirage"
 colorscheme ayu
 
 
-"" vim-devicons
+" vim-devicons
 let g:webdevicons_enable = 1
 
 
-"" vim-markdown
+" vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sql', 'vim']
 let g:markdown_syntax_conceal = 0
 
 
-"" comfortable-motion
+" comfortable-motion
 let g:comfortable_motion_no_default_key_mappings = 1
 let g:comfortable_motion_impulse_multiplier = 1
 
