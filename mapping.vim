@@ -6,10 +6,10 @@ nnoremap <C-]> i<C-o>$
 
 
 " easy split movement
-nnoremap wh <C-w>h
-nnoremap wj <C-w>j
-nnoremap wk <C-w>k
-nnoremap wl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
 
 
 " move on buffer
@@ -50,8 +50,8 @@ nnoremap <C-w> :q<CR>
 
 
 " tab to indent multiple lines in visual mode
-vnoremap <tab> >
-vnoremap <S-tab> <
+vnoremap <tab> >v<CR>
+vnoremap <S-tab> <v<CR>
 
 
 " exit termimal mode
@@ -67,6 +67,7 @@ nnoremap <leader>r :RangerWorkingDirectory<CR>
 
 
 " LeaderF
+nnoremap <silent> <C-p> :Leaderf file<CR>
 nnoremap <silent> <leader>f :Leaderf file<CR>
 nnoremap <silent> <leader>s :Leaderf rg<CR>
 
@@ -76,7 +77,9 @@ nnoremap <silent> <leader>t :TagbarToggle<CR>
 
 
 " vim-easymotion
-map  / <Plug>(easymotion-sn)
+map  <C-f> <Plug>(easymotion-sn)<C-R>*<CR>  " Ctr-l to search with input from clipboard
+omap <C-f> <Plug>(easymotion-tn)<C-R>*<CR>
+map  / <Plug>(easymotion-sn)  " use easymotion instead of default search
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
@@ -92,7 +95,13 @@ command! -nargs=0 BufferClear    :bufdo! bd
 
 " change and show working directory for Nerdtree with *cd
 function! s:PostCd()
-  execute 'NERDTreeCWD'
+  if exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1
+    silent NERDTreeClose
+  endif
+
+  NERDTreeCWD
+  wincmd w  " unfocus NERDTree split
+
 endfunction
 
 autocmd DirChanged * :call s:PostCd()
