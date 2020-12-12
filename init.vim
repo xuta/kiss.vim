@@ -1,4 +1,6 @@
 """ General
+
+" Space as leader
 let mapleader = " " 
 let g:mapleader = " "
 

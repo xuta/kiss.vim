@@ -19,10 +19,14 @@ nnoremap bd :bdelete<CR>
 
 
 " tab
-nnoremap te :tabnew<CR>  " new empty tab
-nnoremap to :tabnew<CR>:RangerWorkingDirectory<CR>  " new tab with Ranger
-nnoremap tn :tabn<CR>  " move to next tab
-nnoremap tp :tabp<CR>  " move to previous tab
+" new empty tab
+nnoremap te :tabnew<CR>
+" new tab with Ranger
+nnoremap to :tabnew<CR>:RangerWorkingDirectory<CR>
+" move to next tab
+nnoremap tn :tabn<CR>
+" move to previous tab
+nnoremap tp :tabp<CR>
 
 
 " fold/unfold by zz because za is not handy
@@ -77,9 +81,11 @@ nnoremap <silent> <leader>t :TagbarToggle<CR>
 
 
 " vim-easymotion
-map  <C-f> <Plug>(easymotion-sn)<C-R>*<CR>  " Ctr-l to search with input from clipboard
+" Ctr-f to search with input from clipboard
+map  <C-f> <Plug>(easymotion-sn)<C-R>*<CR>
 omap <C-f> <Plug>(easymotion-tn)<C-R>*<CR>
-map  / <Plug>(easymotion-sn)  " use easymotion instead of default search
+" use easymotion instead of default search
+map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
@@ -100,7 +106,8 @@ function! s:PostCd()
   endif
 
   NERDTreeCWD
-  wincmd w  " unfocus NERDTree split
+  " unfocus NERDTree split
+  wincmd w
 
 endfunction
 
