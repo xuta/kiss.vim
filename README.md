@@ -15,6 +15,7 @@
 
 ## Requirements
 
+* [vim-plug](https://github.com/junegunn/vim-plug)
 * [Ranger](https://ranger.github.io)
 * [rg](https://github.com/BurntSushi/ripgrep)
 * ctags (optional)
