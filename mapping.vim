@@ -114,4 +114,19 @@ endfunction
 autocmd DirChanged * :call s:PostCd()
 
 
+" mouse toggle
+function! s:ToggleMouse()
+  if &mouse == 'a'
+    set mouse=
+    echo "mouse mode is off"
+  else
+    set mouse=a
+    echo "mouse mode is on"
+  endif
+endfunction
+
+noremap <leader>m :call <SID>ToggleMouse()<CR>
+inoremap <leader>m <Esc>:call <SID>ToggleMouse()<CR>i
+
+
 " vim: ts=2 sw=2 et

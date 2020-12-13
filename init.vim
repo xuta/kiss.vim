@@ -57,11 +57,11 @@ set incsearch
 
 
 "" import
-let s:nvim_config_root = expand('<sfile>:p:h')
-execute 'source ' . s:nvim_config_root . '/plugin.vim'
-execute 'source ' . s:nvim_config_root . '/mapping.vim'
+let s:config_root = expand('<sfile>:p:h')
+execute 'source ' . s:config_root . '/plugin.vim'
+execute 'source ' . s:config_root . '/mapping.vim'
 
-let s:local_config = s:nvim_config_root . '/local.vim'
+let s:local_config = s:config_root . '/local.vim'
 if filereadable(s:local_config)
   execute 'source ' . s:local_config
 endif

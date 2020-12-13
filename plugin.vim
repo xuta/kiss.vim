@@ -7,7 +7,7 @@ call plug#begin(g:PLUGIN_HOME)
 " bclose is required by ranger.vim
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeCWD'] }
+Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeCWD'] }
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " Git
