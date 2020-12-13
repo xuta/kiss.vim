@@ -126,7 +126,5 @@ function! s:ToggleMouse()
 endfunction
 
 noremap <leader>m :call <SID>ToggleMouse()<CR>
-inoremap <leader>m <Esc>:call <SID>ToggleMouse()<CR>i
-
 
 " vim: ts=2 sw=2 et

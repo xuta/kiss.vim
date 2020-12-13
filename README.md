@@ -12,6 +12,24 @@
 * Handy movement by experienced hot-keys setup
 * Auto saving
 
+## Requirements
+
+* [Ranger](https://ranger.github.io)
+* [rg](https://github.com/BurntSushi/ripgrep)
+* ctags (optional)
+
+## Installation
+
+**Note**: this configuration might conflict with your current setup. 
+
+```bash
+# Assuming that your nvim configuration is empty before starting
+mkdir -p ~/.config/nvim
+cd ~/.config/nvim
+git clone git@github.com:xuta/kiss.vim.git .
+nvim
+```
+
 ## Shortcuts
 
 Check out [mapping.vim](https://github.com/xuta/kiss.vim/blob/main/mapping.vim)
