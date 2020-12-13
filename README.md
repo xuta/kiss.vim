@@ -11,6 +11,7 @@
 * [Easymotion](https://github.com/easymotion/vim-easymotion) to replace default search
 * Handy movement by experienced hot-keys setup
 * Auto saving
+* Markdown support
 
 ## Requirements
 
@@ -33,6 +34,12 @@ nvim
 ## Shortcuts
 
 Check out [mapping.vim](https://github.com/xuta/kiss.vim/blob/main/mapping.vim)
+
+## Pro tips
+
+* `:cd` to change working directory, LeaderF and NERDTree will change root directory for exploring and searching.
+* `Ctrl-f` to search text in current buffer with input from clipboard
+* `Ctrl-]` to go to end of line in `insert` mode
 
 ## References
 
