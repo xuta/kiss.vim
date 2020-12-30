@@ -4,6 +4,9 @@
 inoremap <C-]> <C-o>$
 nnoremap <C-]> i<C-o>$
 
+" go to end of line right before break line sign
+nnoremap $ g_
+vnoremap $ g_
 
 " easy split movement
 nnoremap sh <C-w>h
